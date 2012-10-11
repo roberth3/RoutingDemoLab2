@@ -1,0 +1,22 @@
+﻿
+@*@section JavaScript
+{
+   <script type="text/javascript" src="@Url.Content("/Scripts/jquery.unobtrusive-ajax.min.js")"></script>
+}*@
+
+@{
+    ViewBag.Title = "Search Page";
+}
+
+@using (Html.BeginForm("Results", "Search", FormMethod.Post))
+{ 
+    <h2>
+        Search page</h2>
+    <p>
+        This page would display a form to allow user to enter a search term
+    </p>
+
+    @Html.TextBox("target") 
+    
+    <input id="Submit1" type="submit" value="submit" />
+}
